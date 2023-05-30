@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Username Page</title>
+ 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #112234; /* Set the background color */
+    }
+
+    .gif-animation {
+      max-width: 100%; /* Limit the width of the animation to the width of the container */
+      max-height: 80vh; /* Limit the height of the animation to 80% of the viewport height */
+      margin-top: 10vh; /* Adjust the margin-top value to move the GIF down */
+      height: auto; /* Allow the height to adjust proportionally */
+      width: auto; /* Allow the width to adjust proportionally */
+    }
+
+    .button-container {
+      position: fixed;
+      bottom: 5vh;
+      right: 10px; /* Adjust the right position */
+      padding: 10px;
+    }
+
+    .next-button {
+      padding: 20px 40px;
+      background-color: #FF3A10; /* Green color for next button */
+      color: #000000;
+      border: none;
+      border-radius: 10px; /* Rounded corners for the button */
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      /* Adjust the styles for smaller screens */
+      .gif-animation {
+        margin-top: 5vh;
+      }
+
+      .button-container {
+        bottom: 2vh;
+        right: 5px;
+      }
+
+      .next-button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="demo.gif" alt="Animation" class="gif-animation">
+
+  <div class="button-container">
+    <button class="continue-button next-button">Next</button>
+  </div>
+
+  <script>
+    const nextButton = document.querySelector('.next-button');
+
+    nextButton.addEventListener('click', function() {
+      window.location.href = 'explanation6.html'; // Redirect to explanation6.html when the next button is clicked
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FF3A10; /* Set the background color */
+    }
+  
+    .container {
+      text-align: center;
+      height: 100vh; /* Adjust the height to fill the entire viewport */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    /* Additional styles for the logo */
+    .container img {
+      max-width: 100%; /* Ensure the logo doesn't exceed the container's width */
+      width: 300px; /* Adjust the width to make the logo bigger */
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <img src="frontpage.png" alt="Logo">
+  </div>
+  <script>
+    function continueToNextPage() {
+      window.location.href = "username.html"; // Replace with the desired URL
+    }
+    document.addEventListener('click', continueToNextPage);
+  </script>
+</body>
+</html>

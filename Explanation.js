@@ -36,7 +36,7 @@ const Explanation = () => {
 
   const buttonContainerStyle = {
     position: 'fixed',
-    bottom: '10vh',
+    bottom: '0vh',
     left: 0,
     right: 0,
     display: 'flex',
@@ -45,21 +45,31 @@ const Explanation = () => {
   };
 
   const skipButtonStyle = {
-    padding: '20px 40px',
-    backgroundColor: '#d7d7d7',
-    color: '#000000',
+    position: 'absolute',
+    bottom: '10vh',
+    left: '20%',
+    transform: 'translateX(-50%)',
+    padding: '15px 30px',
+    backgroundColor: '#194842',
+    color: '#fff',
     border: 'none',
-    borderRadius: '10px',
-    cursor: 'pointer',
+    borderradius: '10px',
+    textDecoration: 'none',
+    fontSize: '20px',
   };
 
   const nextButtonStyle = {
-    padding: '20px 40px',
-    backgroundColor: '#FF3A10',
-    color: '#000000',
+    fontSize: '20px',
+    position: 'absolute',
+    bottom: '10vh',
+    left: '80%',
+    transform: 'translateX(-50%)',
+    padding: '15px 30px',
+    backgroundColor: '#FD390E',
+    color: '#fff',
     border: 'none',
     borderRadius: '10px',
-    cursor: 'pointer',
+    textDecoration: 'none'
   };
 
   return (

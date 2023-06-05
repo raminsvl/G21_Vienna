@@ -43,12 +43,17 @@ const Explanation2 = () => {
   
 
   const nextButtonStyle = {
-    padding: '20px 40px',
-    backgroundColor: '#FF3A10',
-    color: '#000000',
+    fontSize: '20px',
+    position: 'absolute',
+    bottom: '0vh',
+    left: '80%',
+    transform: 'translateX(-50%)',
+    padding: '15px 30px',
+    backgroundColor: '#FD390E',
+    color: '#fff',
     border: 'none',
     borderRadius: '10px',
-    cursor: 'pointer',
+    textDecoration: 'none'
   };
 
   return (

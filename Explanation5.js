@@ -12,29 +12,34 @@ const containerStyle = {
 };
 
 const buttonStyle = {
-  position: 'absolute',
-  bottom: '5vh',
-  padding: '20px 40px',
-  backgroundColor: '#FF3A10',
-  color: '#000000',
-  border: 'none',
-  borderRadius: '10px',
-  cursor: 'pointer',
-  right: '5%', // Adjust this value to move the button further to the right
+    fontSize: '20px',
+    position: 'absolute',
+    bottom: '10vh',
+    left: '80%',
+    transform: 'translateX(-50%)',
+    padding: '15px 30px',
+    backgroundColor: '#FD390E',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '10px',
+    textDecoration: 'none'
 };
 
 const playButtonStyle = {
-  position: 'absolute',
-  bottom: '14vh',
-  padding: '20px 40px',
-  backgroundColor: '#FF3A10',
-  color: '#000000',
-  border: 'none',
-  borderRadius: '10px',
-  cursor: 'pointer',
-  right: '5%', 
-  
+    fontSize: '20px',
+    position: 'absolute',
+    bottom: '10vh',
+    left: '25%',
+    transform: 'translateX(-50%)',
+    padding: '15px 30px',
+    backgroundColor: '#194842',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '10px',
+    textDecoration: 'none' 
 };
+
+
 
 const animationStyle = {
   position: 'absolute',

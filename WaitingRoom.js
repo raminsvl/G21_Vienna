@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './WaitingRoom.css';
 
 const WaitingRoom = () => {
+    /*
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -19,11 +20,13 @@ const WaitingRoom = () => {
       console.error('Error fetching users:', error);
     }
   };
+  */
 
-  return (
-    <div className="container">
-      <h1>Waiting for everyone to get ready</h1>
-      <ul>
+
+
+
+  /* Flytt dette til under return og waiting for everyone to get ready...
+   <ul>
         {users.map((user, index) => (
           <li key={index} className="player">
             {user.name}
@@ -33,6 +36,12 @@ const WaitingRoom = () => {
           </li>
         ))}
       </ul>
+  */
+
+  return (
+    <div className="container">
+      <h1>Waiting for everyone to get ready</h1>
+     
       <button className="readyButton">Ready</button>
       <button className="nextButtonStyle">Next</button>
     </div>

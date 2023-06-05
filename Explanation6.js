@@ -23,12 +23,12 @@ const Explanation6 = () => {
     position: 'absolute',
     color: '#fff',
     fontSize: '30px',
-    top: '15%',
+    top: '25%',
   };
 
   const explanationStyle = {
     position: 'absolute',
-    top: '30%',
+    top: '45%',
     color: '#fff',
     fontSize: '20px',
     marginTop: '5vh',

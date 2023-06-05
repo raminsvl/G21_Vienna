@@ -15,15 +15,18 @@ const Explanation3 = () => {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#122334', // Add this line to set the background color
+    alignItems: 'flex-start',
+    backgroundColor: '#122334',
   };
+  
 
   const titleStyle = {
     color: '#fff',
-    fontSize: '30px',
-    marginTop: '-30vh',
+    fontSize: '20px',
+    top: '0%',
+    marginTop: '-10vh',
   };
+  
 
   const explanationStyle = {
     color: '#fff',

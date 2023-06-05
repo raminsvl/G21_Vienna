@@ -1,0 +1,128 @@
+/* App.css */
+@font-face {
+  font-family: 'MyFont';
+  src: url('./fonts/GirottMunch-BoldBackslant.ttf') format('truetype');
+  /* Add other font properties if needed */
+}
+
+.Intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+ul {
+  font-family: MyFont;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  position: relative;
+  font-size: 24vw;
+  color: var(--text-color);
+  animation: colorAnimation 2s infinite steps(1);
+}
+
+@keyframes colorAnimation {
+  0% {
+    color: var(--text-color);
+  }
+  100% {
+    color: var(--text-color);
+  }
+}
+
+li:nth-child(1) {
+  animation: falling_top 0.7s ease forwards 3s;
+}
+
+.secondLiElement {
+  bottom: 1vw;
+  left: 3vw;
+  animation: colorAnimation 2s infinite steps(1), flip 0.5s linear 3.1s, fadeIn 2s ease forwards 3.7s;
+}
+
+.secondLiElement::before {
+  content: 'MUNCH';
+  position: absolute;
+  animation: fadeIn 2s ease forwards 3.7s;
+}
+
+li:nth-child(3) {
+  right: -4.5vw;
+  animation: falling_bottom 0.7s ease forwards 3s;
+}
+
+li:nth-child(4) {
+  position: absolute;
+  left: 45vw;
+  top: 42.9vh;
+  animation: fadeOut 2s ease forwards 4.4s;
+  visibility: hidden;
+
+}
+
+@keyframes falling_top {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(13vh);
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes falling_bottom {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-13vh);
+    opacity: 0;
+    display: none;
+  }
+}
+
+/* Munch text doing flip */
+@keyframes flip {
+  0% {
+  }
+  60% {
+    transform: rotateX(180deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(200vw);
+    display: none;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    left: 47vw;
+    scale: 1.5;
+  }
+}

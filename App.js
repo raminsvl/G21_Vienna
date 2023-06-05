@@ -8,6 +8,7 @@ import Explanation4 from './Explanation4';
 import Explanation5 from './Explanation5'; 
 import Explanation6 from './Explanation6'; 
 import JoinGame from './JoinGame';
+import WaitingRoom from './WaitingRoom';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/explanation5" element={<Explanation5 />} />
         <Route path="/explanation6" element={<Explanation6 />} />
         <Route path="/joingame" element={<JoinGame/>} />
+        <Route path="/waitingroom" element={<WaitingRoom/>} />
       </Routes>
     </Router>
   );

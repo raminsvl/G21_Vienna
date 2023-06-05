@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./GirottMunch-BoldBackslant.ttf') format('truetype');
+  font-weight: normal; /* Add this line */
+  font-style: normal; /* Add this line */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #122334;
+}
+
+.title {
+  color: white;
+  position: absolute;
+  top: 15%;
+  font-size: 40px;
+  font-family: 'CustomFont';
+}
+
+.joinText {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 20px;
+  position: absolute;
+  left: 23%; 
+  top: 40%;
+}  
+
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.inputField {
+  max-width: 70%;
+  width: 100%; /* Add this line to make the input field expand to the available width */
+  height: 35px;
+  margin-bottom: 20px;
+  border-radius: 10px; /* Add this line for round corners */
+}
+
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.backButton {
+  font-size: 20px;
+  position: absolute;
+  bottom: 10vh;
+  left: 20%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  background-color: #194842;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.joinButton {
+  font-size: 20px;
+  position: absolute;
+  bottom: 10vh;
+  left: 80%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  background-color: #FD390E;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}

@@ -20,8 +20,8 @@
 .title2 {
   top: 2vh;
   color: #FF3A10;
-  font-size: 50px;
-  margin-top: 20vh;
+  font-size: 55px;
+  margin-top: -55vh;
   margin-bottom: 10vh;
   
 }
@@ -36,7 +36,7 @@
 
 .username-container {
   text-align: center;
-  margin-top: 2vh;
+  bottom: 50%;
   margin-bottom: 2vh;
 }
 

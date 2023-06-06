@@ -11,6 +11,8 @@ import JoinGame from './JoinGame';
 import WaitingRoom from './WaitingRoom';
 import CreateAGame from './CreateAGame';
 import Intro from './Intro';
+import Mode from './Mode';
+import Multiplayer from './Multiplayer';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route path="/joingame" element={<JoinGame/>} />
         <Route path="/waitingroom" element={<WaitingRoom/>} />
         <Route path="/createagame" element={<CreateAGame/>} />
+        <Route path="/mode" element={<Mode/>} />
+        <Route path="/multiplayer" element={<Multiplayer/>} />
         
       </Routes>
     </Router>

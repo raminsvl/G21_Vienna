@@ -11,7 +11,7 @@ const CreateAGame = () => {
   };
 
   const handleNextButtonClick = () => {
-    navigate('/explanation2');
+    navigate('/waitingroom');
   };
 
   const handleNumPlayersChange = (event) => {
@@ -24,7 +24,17 @@ const CreateAGame = () => {
   };
 
   const handleCopyCodeClick = () => {
-    navigator.clipboard.writeText(code);
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(code)
+        .then(() => {
+          console.log('Code copied successfully!');
+        })
+        .catch((error) => {
+          console.error('Failed to copy code:', error);
+        });
+    } else {
+      console.error('Clipboard writeText method not supported.');
+    }
   };
 
   const generateRandomCode = () => {
@@ -61,7 +71,7 @@ const CreateAGame = () => {
     fontSize: '20px',
     marginTop: '5vh', // Adjust the margin top here
   };
-  
+
   const dropdownStyle = {
     position: 'absolute',
     top: '30%',
@@ -71,8 +81,7 @@ const CreateAGame = () => {
     fontSize: '18px',
     borderRadius: '10px', // Add this line for rounded corners
   };
-  
-  
+
   const buttonContainerStyle = {
     position: 'fixed',
     bottom: '0vh',
@@ -109,7 +118,7 @@ const CreateAGame = () => {
     border: 'none',
     borderRadius: '10px',
     textDecoration: 'none',
-  };
+  }
 
   const generateButtonStyle = {
     fontSize: '15px',
@@ -128,9 +137,9 @@ const CreateAGame = () => {
   const generatedCodeText = {
     color: '#fff',
     fontSize: '30px',
-    marginTop: '40vh', // Adjust the margin top here
+    marginTop: '20vh', // Adjust the margin top here
   };
-  
+
   const copyButtonStyle = {
     fontSize: '16px',
     padding: '10px 20px',
@@ -141,7 +150,6 @@ const CreateAGame = () => {
     marginTop: '10px', // Adjust the margin top here
     cursor: 'pointer',
   };
-  
 
   const dropdownOptions = Array.from({ length: 10 }, (_, index) => index + 1);
 
@@ -158,12 +166,12 @@ const CreateAGame = () => {
             </option>
           ))}
         </select>
-  
+
         <button style={generateButtonStyle} onClick={handleGenerateCodeClick}>
           Create
         </button>
       </div>
-  
+
       {code && (
         <div>
           <p style={generatedCodeText}>{code}</p>
@@ -172,7 +180,7 @@ const CreateAGame = () => {
           </button>
         </div>
       )}
-  
+
       <div style={buttonContainerStyle}>
         <button style={skipButtonStyle} onClick={handleSkipButtonClick}>
           Skip
@@ -187,6 +195,6 @@ const CreateAGame = () => {
       </div>
     </div>
   );
-      };  
+};
 
 export default CreateAGame;

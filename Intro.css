@@ -1,7 +1,7 @@
 /* App.css */
 @font-face {
   font-family: 'MyFont';
-  src: url('./fonts/GirottMunch-BoldBackslant.ttf') format('truetype');
+  src: url('./GirottMunch-BoldBackslant.ttf') format('truetype');
   /* Add other font properties if needed */
 }
 

@@ -14,6 +14,20 @@ import Intro from './js/Intro';
 import Mode from './js/Mode';
 import Multiplayer from './js/Multiplayer';
 
+import CustomPage from './js/CustomPage';
+import YouChoseSkrik from './js/YouChoseSkrik';
+import YouChoseMadonna from './js/YouChoseMadonna';
+import Game1Madonna from './js/Game1madonna';
+import YouChoseVampyr from './js/YouChoseVampyr';
+import Game1Vampyr from './js/Game1vampyr';
+import Game1Skrik from './js/Game1skrik';
+import Game1selvportrett from './js/Game1selvportrett';
+import ChooseArt from './js/ChooseArt';
+import YouChoseSelvportrett from './js/YouChoseSelvportrett';
+
+
+
+
 function App() {
   return (
     <Router>
@@ -32,6 +46,16 @@ function App() {
         <Route path="/mode" element={<Mode/>} />
         <Route path="/multiplayer" element={<Multiplayer/>} />
         
+        <Route path="/custompage" element={<CustomPage />} />
+        <Route path="/chooseart" element={<ChooseArt />} />
+        <Route path="/you-chose-selvportrett" element={<YouChoseSelvportrett />} />
+        <Route path="/you-chose-selvportrett/selvportrett" element={<Game1selvportrett />} />
+        <Route path="/you-chose-skrik" element={<YouChoseSkrik />} />
+        <Route path="/you-chose-madonna" element={<YouChoseMadonna />} />
+        <Route path="/you-chose-vampyr" element={<YouChoseVampyr />} />
+        <Route path="/you-chose-skrik/skrik" element={<Game1Skrik />} />
+        <Route path="/you-chose-madonna/madonna" element={<Game1Madonna />} />
+        <Route path="/you-chose-vampyr/vampyr" element={<Game1Vampyr />} />
       </Routes>
     </Router>
   );

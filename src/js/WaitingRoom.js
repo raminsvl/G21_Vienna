@@ -40,7 +40,7 @@ const WaitingRoom = () => {
 
   return (
     <div className="container">
-      <h1>Waiting for everyone to get ready</h1>
+      <h1 className="title">Waiting for everyone to get ready</h1>
      
       <button className="readyButton">Ready</button>
       <button className="nextButtonStyle">Next</button>

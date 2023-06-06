@@ -48,6 +48,7 @@ const animationStyle = {
   top: 0,
   left: 0,
   objectFit: 'contain',
+  boxShadow: 'none',
 };
 
 const Explanation5 = () => {

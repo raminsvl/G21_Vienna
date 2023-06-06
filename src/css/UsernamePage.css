@@ -17,13 +17,17 @@
 }
 
 .title2 {
-  top: 2vh;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #FF3A10;
   font-size: 55px;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-  
+  margin: 0;
+  white-space: nowrap;
 }
+
+
 
 .text-the {
   color: #ffff;
@@ -71,8 +75,10 @@
   left: 50%;
   transform: translateX(-50%);
   top: 55%;
+  width: 100%;
   max-width: 300px;
   display: block;
+  box-shadow: none;
 }
 
 .leaderboard-button {

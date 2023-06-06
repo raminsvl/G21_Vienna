@@ -61,7 +61,7 @@ const Explanation3 = () => {
 
   return (
     <div style={containerStyle}>
-      <h1 style={titleStyle}>Now the game will divide the painting into squares based on the difficulty you have chosen.</h1>
+      <p style={titleStyle}>Now the game will divide the painting into squares based on the difficulty you have chosen.</p>
       <p style={explanationStyle}>The higher the difficulty, the smaller the sqaures.</p>
 
       <div style={buttonContainerStyle}>

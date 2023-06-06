@@ -7,15 +7,16 @@
     height: 100vh;
   }
   
-  .container h1 {
-    color: #ffffff;
-    margin-top: 20px; /* Add margin to create space between the title and the top */
-  }
-  
   .container ul {
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+
+  .title{
+    color: #ffffff;
+    margin-top: 5%;
+    
   }
   
   .container li {

@@ -1,18 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import UsernamePage from './UsernamePage';
-import Explanation from './Explanation';
-import Explanation2 from './Explanation2'; 
-import Explanation3 from './Explanation3'; 
-import Explanation4 from './Explanation4'; 
-import Explanation5 from './Explanation5'; 
-import Explanation6 from './Explanation6'; 
-import JoinGame from './JoinGame';
-import WaitingRoom from './WaitingRoom';
-import CreateAGame from './CreateAGame';
-import Intro from './Intro';
-import Mode from './Mode';
-import Multiplayer from './Multiplayer';
+import UsernamePage from './js/UsernamePage';
+import Explanation from './js/Explanation';
+import Explanation2 from './js/Explanation2'; 
+import Explanation3 from './js/Explanation3'; 
+import Explanation4 from './js/Explanation4'; 
+import Explanation5 from './js/Explanation5'; 
+import Explanation6 from './js/Explanation6'; 
+import JoinGame from './js/JoinGame';
+import WaitingRoom from './js/WaitingRoom';
+import CreateAGame from './js/CreateAGame';
+import Intro from './js/Intro';
+import Mode from './js/Mode';
+import Multiplayer from './js/Multiplayer';
 
 function App() {
   return (

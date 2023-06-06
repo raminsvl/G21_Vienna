@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './Intro.css';
+import '../css/Intro.css';
 
 function Intro() {
   const colors = [

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 //import axios from 'axios';
-import './WaitingRoom.css';
+import '../css/WaitingRoom.css';
 
 const WaitingRoom = () => {
     /*

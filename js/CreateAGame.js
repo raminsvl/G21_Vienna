@@ -7,11 +7,11 @@ const CreateAGame = () => {
   const [code, setCode] = useState('');
 
   const handleSkipButtonClick = () => {
-    navigate('/chooseMode');
+    navigate('/src/js/Mode.js');
   };
 
   const handleNextButtonClick = () => {
-    navigate('/waitingroom');
+    navigate('/src/js/WaitingRoom.js');
   };
 
   const handleNumPlayersChange = (event) => {

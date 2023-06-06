@@ -10,13 +10,14 @@ import Explanation6 from './Explanation6';
 import JoinGame from './JoinGame';
 import WaitingRoom from './WaitingRoom';
 import CreateAGame from './CreateAGame';
+import Intro from './Intro';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<UsernamePage />} />
-        <Route path="/username" element={<UsernamePage />} />
+      <Route path="/" element={<Intro/>} />
+        <Route path="/usernamepage" element={<UsernamePage />} />
         <Route path="/explanation" element={<Explanation />} />
         <Route path="/explanation2" element={<Explanation2 />} />
         <Route path="/explanation3" element={<Explanation3 />} />

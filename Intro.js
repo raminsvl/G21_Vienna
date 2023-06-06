@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Intro.css';
 
 function Intro() {
@@ -14,6 +15,7 @@ function Intro() {
   ];
 
   const [currentColorIndex, setCurrentColorIndex] = useState(0);
+  const navigate = useNavigate(); // Declare useNavigate hook here
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,6 +23,9 @@ function Intro() {
         const nextIndex = prevIndex + 1;
         if (nextIndex === colors.length) {
           clearInterval(interval); // Stop the color change
+          setTimeout(() => {
+            navigate('/usernamepage'); // Navigate to the next page after 5 seconds
+          }, 3900);
         }
         return nextIndex % colors.length;
       });
@@ -29,7 +34,7 @@ function Intro() {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [colors.length, navigate]); // Add navigate as a dependency for useEffect
 
   const currentColor = colors[currentColorIndex];
 

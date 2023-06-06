@@ -79,10 +79,10 @@ const Mode = () => {
 
       <div style={buttonContainerStyle}>
         <button className="continue-button skip-button" style={skipButtonStyle} onClick={handleSkipButtonClick}>
-          Skip
+          Singleplayer
         </button>
         <button className="continue-button next-button" style={nextButtonStyle} onClick={handleNextButtonClick}>
-          Next
+          Play with friends
         </button>
       </div>
     </div>

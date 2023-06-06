@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "G21_Vienna",
+			"path": "../../../../../G21_Vienna"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}

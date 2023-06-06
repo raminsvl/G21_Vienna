@@ -31,15 +31,15 @@
   top: 40%;
 }  
 
-
-
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  height: 100%;
 }
+
 
 .inputField {
   max-width: 70%;

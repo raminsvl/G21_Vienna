@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import invalidInputImage from './invalid_input.gif';
-import './styles.css';
+import './UsernamePage.css';
 
 
 function UsernamePage() {

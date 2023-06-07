@@ -8,7 +8,7 @@ const containerStyle = {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: '#122334',
+  backgroundColor: '#0f2335',
 };
 
 const buttonStyle = {
@@ -18,7 +18,7 @@ const buttonStyle = {
     left: '80%',
     transform: 'translateX(-50%)',
     padding: '15px 30px',
-    backgroundColor: '#FD390E',
+    backgroundColor: '#fe390f',
     color: '#fff',
     border: 'none',
     borderRadius: '10px',
@@ -32,7 +32,7 @@ const playButtonStyle = {
     left: '25%',
     transform: 'translateX(-50%)',
     padding: '15px 30px',
-    backgroundColor: '#194842',
+    backgroundColor: '#194641',
     color: '#fff',
     border: 'none',
     borderRadius: '10px',

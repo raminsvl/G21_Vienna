@@ -16,7 +16,7 @@ const Explanation4 = () => {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#122334', 
+    backgroundColor: '#0f2335', 
   };
 
   const titleStyle = {
@@ -49,7 +49,7 @@ const Explanation4 = () => {
     left: '80%',
     transform: 'translateX(-50%)',
     padding: '15px 30px',
-    backgroundColor: '#FD390E',
+    backgroundColor: '#fe390f',
     color: '#fff',
     border: 'none',
     borderRadius: '10px',

@@ -16,7 +16,7 @@ const Explanation6 = () => {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#122334', // Add this line to set the background color
+    backgroundColor: '#0f2335', // Add this line to set the background color
   };
 
   const titleStyle = {
@@ -51,7 +51,7 @@ const Explanation6 = () => {
     left: '80%',
     transform: 'translateX(-50%)',
     padding: '15px 30px',
-    backgroundColor: '#FD390E',
+    backgroundColor: '#fe390f',
     color: '#fff',
     border: 'none',
     borderRadius: '10px',
@@ -66,7 +66,7 @@ const Explanation6 = () => {
   }
 
   const noteText = {
-    color: '#FF3A10', // Set the color to red
+    color: '#fe390f', // Set the color to red
   };
 
   return (

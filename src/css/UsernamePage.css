@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #122334;
+  background-color: #0f2335;
 }
 
 .title2 {
@@ -21,7 +21,7 @@
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #FF3A10;
+  color: #fe390f;
   font-size: 55px;
   margin: 0;
   white-space: nowrap;
@@ -62,7 +62,7 @@
   left: 50%;
   transform: translateX(-50%);
   padding: 15px 30px;
-  background-color: #ff3a10;
+  background-color: #fe390f;
   color: white;
   border: none;
   border-radius: 10px;

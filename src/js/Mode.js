@@ -5,7 +5,7 @@ const Mode = () => {
   const navigate = useNavigate();
 
   const handleSkipButtonClick = () => {
-    navigate('/selectdifficulty'); // Navigate to chooseMode page when skip button is clicked
+    navigate('/difficulty'); // Navigate to chooseMode page when skip button is clicked
   };
 
   const handleNextButtonClick = () => {
@@ -73,6 +73,7 @@ const Mode = () => {
   };
 
   return (
+    
     <div style={containerStyle}>
       <h1 style={titleStyle}>Her velger en mode..</h1>
       <p style={explanationStyle}>osv</p>

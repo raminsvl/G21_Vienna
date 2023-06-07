@@ -19,7 +19,7 @@ const Explanation = () => {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#122334', 
+    backgroundColor: '#0f2335', 
   };
 
   const titleStyle = {
@@ -50,7 +50,7 @@ const Explanation = () => {
     left: '20%',
     transform: 'translateX(-50%)',
     padding: '15px 30px',
-    backgroundColor: '#194842',
+    backgroundColor: '#194641',
     color: '#fff',
     border: 'none',
     borderradius: '10px',
@@ -65,7 +65,7 @@ const Explanation = () => {
     left: '80%',
     transform: 'translateX(-50%)',
     padding: '15px 30px',
-    backgroundColor: '#FD390E',
+    backgroundColor: '#fe390f',
     color: '#fff',
     border: 'none',
     borderRadius: '10px',

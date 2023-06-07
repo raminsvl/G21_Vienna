@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'MunchFont';
+    src: url('./GirottMunch-BoldBackslant.ttf') format('truetype');
+  }
+  
+  body {
+    background-color: #0f2335;
+    text-align: center;
+  }
+  
+  h1 {
+    color: white;
+    font-size: 12vw;
+    margin-top: 7vh;
+    font-family: 'MunchFont';
+    text-shadow: 20px 20px 4px rgb(0, 0, 0);
+  }
+  
+  .easy-button {
+    font-family: 'MunchFont';
+    background: linear-gradient(#eba398, #d27d6c);
+    color: white;
+    font-size: 8vw;
+    height: 9vh;
+    width: 80vw;
+    border-radius: 110px;
+    box-shadow: 0 40px 50px rgb(0, 0, 0);
+    
+    margin-top: 15vh;
+  }
+  
+  .medium-button {
+    font-family: 'MunchFont';
+    background: linear-gradient(#9b8250, #7a6a4f);
+    color: white;
+    font-size: 8vw;
+    height: 9vh;
+    width: 80vw;
+    border-radius: 110px;
+    box-shadow: 0 40px 50px rgb(0, 0, 0);
+  
+    margin: 4vh;
+  }
+  
+  .hard-button {
+    font-family: 'MunchFont';
+    background: linear-gradient(#fe390f, #cc3119);
+    color: white;
+    font-size: 8vw;
+    height: 9vh;
+    width: 80vw;
+    border-radius: 110px;
+    box-shadow: 0 40px 50px rgb(0, 0, 0);
+  }
+  
+  .back-button {
+    background-color: #fe390f;
+    color: white;
+    font-size: 5vw;
+    height: 5.5vh;
+    width: 35vw;
+    box-shadow: 0 40px 50px rgb(0, 0, 0);
+  
+    margin-top: 22vh;
+  
+  }
+  
+  .easy-button:hover, .medium-button:hover, .hard-button:hover,.back-button:hover {
+    opacity: 0.8;
+  }
+  

@@ -24,7 +24,9 @@ const Explanation3 = () => {
     color: '#fff',
     fontSize: '20px',
     top: '0%',
+    textShadow: 'none',
     marginTop: '-10vh',
+    fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
   };
   
 

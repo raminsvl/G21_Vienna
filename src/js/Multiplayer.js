@@ -26,6 +26,8 @@ const Multiplayer = () => {
     color: '#fff',
     fontSize: '30px',
     marginTop: '-30vh',
+    textShadow: 'none',
+    fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
   };
 
   const explanationStyle = {

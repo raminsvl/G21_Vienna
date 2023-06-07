@@ -23,7 +23,9 @@ const Explanation6 = () => {
     position: 'absolute',
     color: '#fff',
     fontSize: '30px',
+    textShadow: 'none',
     top: '25%',
+    fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
   };
 
   const explanationStyle = {

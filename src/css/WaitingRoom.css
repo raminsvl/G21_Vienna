@@ -16,6 +16,8 @@
   .title{
     color: #ffffff;
     margin-top: 5%;
+    text-Shadow: none;
+    font-Family: sans-serif;
     
   }
   
@@ -31,6 +33,7 @@
     padding: 5px 10px;
     border-radius: 5px;
     color: #ffffff;
+    
   }
   
   .container li .status.ready {

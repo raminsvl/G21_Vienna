@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import invalidInputImage from '../bilder/invalid_input.gif';
 import '../css/UsernamePage.css';
 
-
 function UsernamePage() {
   const [username, setUsername] = useState('');
   const [showErrorAnimation, setShowErrorAnimation] = useState(false);

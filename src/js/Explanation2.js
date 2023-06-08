@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
+
 const Explanation2 = () => {
   const navigate = useNavigate();
 
@@ -24,7 +25,7 @@ const Explanation2 = () => {
     fontSize: '30px',
     marginTop: '-30vh',
     textShadow: 'none',
-    fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
+    fontFamily: 'sans-serif',
     
   };
 
@@ -60,6 +61,7 @@ const Explanation2 = () => {
   };
 
   return (
+    
     <div style={containerStyle}>
       <h1 style={titleStyle}>First...</h1>
       <p style={explanationStyle}>Choose a painting and then find it in the museum</p>
@@ -70,6 +72,7 @@ const Explanation2 = () => {
         </button>
       </div>
     </div>
+
   );
 };
 

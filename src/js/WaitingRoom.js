@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 //import axios from 'axios';
 import '../css/WaitingRoom.css';
 
 const WaitingRoom = () => {
+  const navigate = useNavigate();
+
+  const nextButton = () => {
+    navigate('/difficulty'); // Navigate to chooseMode page when skip button is clicked
+  };
     /*
   const [users, setUsers] = useState([]);
 
@@ -42,8 +48,8 @@ const WaitingRoom = () => {
     <div className="container">
       <h1 className="title">Waiting for everyone to get ready</h1>
      
-      <button className="readyButton">Ready</button>
-      <button className="nextButtonStyle">Next</button>
+      <button className="readyButton" >Ready</button>
+      <button className="nextButtonStyle" onClick={nextButton}>Next</button>
     </div>
   );
 };

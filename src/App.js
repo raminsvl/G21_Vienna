@@ -11,7 +11,7 @@ import JoinGame from './js/JoinGame';
 import WaitingRoom from './js/WaitingRoom';
 import CreateAGame from './js/CreateAGame';
 import Intro from './js/Intro';
-import Mode from './js/Mode';
+import SingleOrMultiPlayer from './js/SingleOrMultiPlayer';
 import Multiplayer from './js/Multiplayer';
 
 import CustomPage from './js/CustomPage';
@@ -44,7 +44,7 @@ function App() {
         <Route path="/joingame" element={<JoinGame/>} />
         <Route path="/waitingroom" element={<WaitingRoom/>} />
         <Route path="/createagame" element={<CreateAGame/>} />
-        <Route path="/mode" element={<Mode/>} />
+        <Route path="/singleormultiplayer" element={<SingleOrMultiPlayer/>} />
         <Route path="/multiplayer" element={<Multiplayer/>} />
         
         <Route path="/custompage" element={<CustomPage />} />

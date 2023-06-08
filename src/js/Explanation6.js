@@ -6,7 +6,7 @@ const Explanation6 = () => {
   const navigate = useNavigate();
 
   const handleNextButtonClick = () => {
-    navigate('/mode'); // Navigate to Explanation2 page when next button is clicked
+    navigate('/singleormultiplayer'); // Navigate to Explanation2 page when next button is clicked
   };
 
   const containerStyle = {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import invalidInputImage from '../bilder/invalid_input.gif';
 import '../css/UsernamePage.css';
@@ -7,37 +7,38 @@ function UsernamePage() {
   const [username, setUsername] = useState('');
   const [showErrorAnimation, setShowErrorAnimation] = useState(false);
   const [showGif, setShowGif] = useState(false);
-  
-  
+
   const navigate = useNavigate();
-
-  useEffect(() => {
-    let timeout;
-
-    if (showGif) {
-      timeout = setTimeout(() => {
-        setShowGif(false);
-      }, 6000);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [showGif]);
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
 
-  const handleContinueClick = () => {
+  const handleContinueClick = async () => {
     if (username.trim() === '') {
       setShowErrorAnimation(true);
       setShowGif(true);
     } else {
       setShowErrorAnimation(false);
       setShowGif(false);
-      // Redirect to the Explanation page
-      navigate('/explanation');
+  
+      const response = await fetch('http://localhost:5006/api/username', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: username,
+        }),
+      });
+  
+      if (response.ok) {
+        // Redirect to the Explanation page
+        navigate('/explanation');
+      }
     }
   };
+  
 
   return (
     <div className="container">

@@ -10,7 +10,7 @@ function Difficulty() {
     };
   
     const handleBackButtonClick = () => {
-      navigate('/mode'); // Navigate to Explanation2 page when next button is clicked
+      navigate('/singleormultiplayer'); // Navigate to Explanation2 page when next button is clicked
     };
     
     

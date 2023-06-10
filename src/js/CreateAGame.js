@@ -6,8 +6,8 @@ const CreateAGame = () => {
   const [numPlayers, setNumPlayers] = useState('');
   const [code, setCode] = useState('');
 
-  const handleSkipButtonClick = () => {
-    navigate('/mode');
+  const handleBackButtonClick = () => {
+    navigate('/multiplayer');
   };
 
   const handleNextButtonClick = () => {
@@ -182,8 +182,8 @@ const CreateAGame = () => {
       )}
 
       <div style={buttonContainerStyle}>
-        <button style={skipButtonStyle} onClick={handleSkipButtonClick}>
-          Skip
+        <button style={skipButtonStyle} onClick={handleBackButtonClick}>
+          Back
         </button>
         <button
           style={nextButtonStyle}

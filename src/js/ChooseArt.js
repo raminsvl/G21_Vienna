@@ -22,7 +22,7 @@ const ChooseArt = () => {
 
   return (
     <div className="header">
-      <h1>Choose image</h1>
+      <p>Choose image</p>
       <div className="image-container">
 
      {/* SELVPORTRETT*/}

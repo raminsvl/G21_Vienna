@@ -7,8 +7,8 @@ import '../css/JoinGame.css'; // Import CSS file for styling
   const JoinGame = () => {
     const navigate = useNavigate();
   
-    const handleSkipButtonClick = () => {
-      navigate('/WaitingRoom'); // Navigate to chooseMode page when skip button is clicked
+    const handleBackButtonClick = () => {
+      navigate('/multiplayer'); // Navigate to chooseMode page when skip button is clicked
     };
   
     const handleNextButtonClick = () => {
@@ -22,7 +22,7 @@ import '../css/JoinGame.css'; // Import CSS file for styling
       <div className="content">
         <input type="text" className="inputField" placeholder="Enter the code" />
         <div className="buttonContainer">
-          <button className="backButton">Back</button>
+          <button className="backButton" onClick={handleBackButtonClick}>Back</button>
           <button className="joinButton" onClick={handleNextButtonClick}>Join</button>
         </div>
       </div>

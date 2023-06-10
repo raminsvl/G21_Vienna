@@ -200,6 +200,7 @@ p{
     margin-top: 10px;
     font-size: 1.5rem;
   }
+
   
   .timer,
   .time,
@@ -207,7 +208,7 @@ p{
   .score {
     color: white;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 1px !important;
     font-size: 1rem;
     display: block;
   }
@@ -216,10 +217,10 @@ p{
   .score {
     color: white;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 1px !important;
     font-size: 2rem;
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem !important;
   }
 
   .BUTTON_CLOSE {

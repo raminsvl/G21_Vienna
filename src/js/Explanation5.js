@@ -1,55 +1,6 @@
 import React, { useRef } from 'react';
 import demo from '../bilder/demo.gif';
-
-const containerStyle = {
-  textAlign: 'center',
-  height: '100vh',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  backgroundColor: '#0f2335',
-};
-
-const buttonStyle = {
-    fontSize: '20px',
-    position: 'absolute',
-    bottom: '10vh',
-    left: '80%',
-    transform: 'translateX(-50%)',
-    padding: '15px 30px',
-    backgroundColor: '#fe390f',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '10px',
-    textDecoration: 'none'
-};
-
-const playButtonStyle = {
-    fontSize: '20px',
-    position: 'absolute',
-    bottom: '10vh',
-    left: '25%',
-    transform: 'translateX(-50%)',
-    padding: '15px 30px',
-    backgroundColor: '#194641',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '10px',
-    textDecoration: 'none' 
-};
-
-
-
-const animationStyle = {
-  position: 'absolute',
-  width: '100%',
-  height: '80%',
-  top: 0,
-  left: 0,
-  objectFit: 'contain',
-  boxShadow: 'none',
-};
+import '../css/Explanation5.css';
 
 const Explanation5 = () => {
   const animationRef = useRef(null);
@@ -65,14 +16,14 @@ const Explanation5 = () => {
   };
 
   return (
-    <div style={containerStyle}>
-      <img ref={animationRef} src={demo} alt="Animation" className="gif-animation" style={animationStyle} />
+    <div className="container">
+      <img ref={animationRef} src={demo} alt="Animation" className="gif-animation" />
 
       <div className="button-container">
-        <button className="continue-button next-button" style={buttonStyle} onClick={handleClickNext}>
+        <button className="button continue-button next-button" onClick={handleClickNext}>
           Next
         </button>
-        <button className="play-again-button" style={playButtonStyle} onClick={handleClickPlayAgain}>
+        <button className="button play-again-button" onClick={handleClickPlayAgain}>
           Play Again
         </button>
       </div>

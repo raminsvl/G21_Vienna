@@ -1,5 +1,97 @@
-/*
+
+
+img {
+  border-radius: 0px !important;
+}
+
+
+.overlayM{
+  background-color: rgba(0,0,0, 0.9);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+}
+
+.modalContainer {
+  max-width: 600px;
+  width: 100%;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: #0f2335;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+}
+
+.modalImage {
+  width: 250px;
+  object-fit: cover;
+  box-shadow: none;
+  /*border: 1px solid white;*/
+}
+
+.modalRight{
+  width: 100%;
+}
+
+h1{
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.correctOrWrong{
+  margin-bottom: 40px;
+}
+
+p{
+  margin: 0px;
+}
+.content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+}
+
+.correctOrWrong{
+  font-size: 2rem;
+}
+
+
+/*///////////////////////////////////////////// */
+
+
+
+
 @media (max-width: 768px){
+
+  img{
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+
+
+  h5 {
+    position: absolute;
+    font-size: 4rem;
+    bottom: 10px;
+  }
+
+  .scoreContainer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+  }
 
   .overlay {
     position: relative;
@@ -64,11 +156,9 @@
     width: 100%;
     height: auto;
     /*padding-bottom: 100%;*/
-
-/*    
     position: relative;
     flex-basis: 33.333%;
-    border: 5px solid white;
+    border: 3px solid white !important;
     
   }
   
@@ -94,7 +184,7 @@
     padding: 2vw; /* Adjust the padding value as per your preference
   }
   */
-  /*
+  
   .random-piece img {
     border: 5px solid blueviolet;
   }
@@ -115,6 +205,7 @@
     margin-top: 10px;
     font-size: 1.5rem;
   }
+
   
   .timer,
   .time,
@@ -122,7 +213,7 @@
   .score {
     color: white;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 1px !important;
     font-size: 1rem;
     display: block;
   }
@@ -131,10 +222,28 @@
   .score {
     color: white;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 1px !important;
     font-size: 2rem;
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .BUTTON_CLOSE {
+    display: block;
+    width: 130px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #FF3A10;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 0.1rem;
+    font-family: Arial, sans-serif;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
   }
   
   .BUTTON_START {
@@ -153,8 +262,10 @@
     font-family: Arial, sans-serif;
   }
 
+
+
 }
-*/
+
 
 
 

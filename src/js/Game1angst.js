@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import '../css/Game1madonna.module.css';
+import '../bilder/Game1skrik.css';
 import placeholderImage2 from '../bilder/MunchLogoSquare.png';
 import { Link } from 'react-router-dom';
 
-const Game1Skrik = () => {
+const Game1Angst = () => {
   const [pieces, setPieces] = useState([]);
   const [randomPiece, setRandomPiece] = useState(null);
   const [showRandomPiece, setShowRandomPiece] = useState(false);
@@ -41,7 +41,7 @@ const Game1Skrik = () => {
     */
 
 
-    image.src = require('../bilder/munch4.jpg');
+    image.src = require('../bilder/munch2.jpg');
    //image.src = process.env.PUBLIC_URL + '/skrik.jpg';
 
         /*
@@ -223,7 +223,7 @@ const Game1Skrik = () => {
         <div className="random-piece-container">
           <div
             className="random-piece-wrapper"
-            style={{ width: imageSize.width / 10, height: imageSize.height /10 }}
+            style={{ width: imageSize.width / 3 / 2, height: imageSize.height / 3 / 2 }}
           >
             {showRandomPiece ? (
               <img src={randomPiece} alt="Random Piece" className="random-piece" />
@@ -291,4 +291,4 @@ const Game1Skrik = () => {
   );
 };
 
-export default Game1Skrik;
+export default Game1Angst;

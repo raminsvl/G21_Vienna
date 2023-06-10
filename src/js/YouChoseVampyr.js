@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../css/YouChose.css';
+import '../css/YouChose.module.css';
 
 const YouChoseVampyr = () => {
     const vampyrRoute = '/you-chose-vampyr/vampyr';
@@ -9,7 +9,7 @@ const YouChoseVampyr = () => {
     <div>
       {/* Existing content */}
       <h1>You chose: <i>Vampyr</i></h1>
-      <img className='skrikImage' src='../bilder/vampyr.jpg'></img>
+      <img className='skrikImage' src='vampyr.jpg'></img>
       <h2>Find this artwork before you continue the game</h2>
       <h3>Hint: 4th floor</h3>
       

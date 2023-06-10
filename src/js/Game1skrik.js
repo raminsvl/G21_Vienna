@@ -20,12 +20,42 @@ const Game1Skrik = () => {
   const [isCorrectPieceClicked, setIsCorrectPieceClicked] = useState(false);
   const [playCount, setPlayCount] = useState(0);
   const [clicksLeft, setClicksLeft] = useState(5);
-  const [isStartButtonDisabled, setIsStartButtonDisabled] = useState(false); // New state variable
+  const [isStartButtonDisabled, setIsStartButtonDisabled] = useState(false);
+  const [gridClickCount, setGridClickCount] = useState(0); // New state variable
+
+  const [isGoToLeaderboardDisabled, setIsGoToLeaderboardDisabled] = useState(true);
 
   useEffect(() => {
     const image = new Image();
-    //image.src = process.env.PUBLIC_URL + '../bilder/skrik.jpg';
-    image.src = require('../bilder/munch3.jpg')
+
+    /*
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+
+    */
+
+
+    image.src = require('../bilder/munch3.jpg');
+   //image.src = process.env.PUBLIC_URL + '/skrik.jpg';
+
+        /*
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+
+    */
+
     image.onload = () => {
       setImageSize({ width: image.width, height: image.height });
       sliceImage(image);
@@ -55,9 +85,9 @@ const Game1Skrik = () => {
     const milliseconds = time % 1000;
     const seconds = Math.floor((time / 1000) % 60);
     const minutes = Math.floor((time / 1000 / 60) % 60);
-    return `${minutes.toString().padStart(2, '0')}:${seconds
+    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}.${milliseconds
       .toString()
-      .padStart(2, '0')}.${milliseconds.toString().padStart(3, '0')}`;
+      .padStart(3, '0')}`;
   };
 
   const sliceImage = (image) => {
@@ -108,7 +138,7 @@ const Game1Skrik = () => {
   };
 
   const handleStartClick = () => {
-    if (clicksLeft === 0 || isStartButtonDisabled) { // Check if the button is disabled
+    if (clicksLeft === 0 || isStartButtonDisabled) {
       return;
     }
 
@@ -118,48 +148,88 @@ const Game1Skrik = () => {
     setCurrentTime(0);
     setClicksLeft((prevClicksLeft) => prevClicksLeft - 1);
     setPlayCount((prevPlayCount) => prevPlayCount + 1);
-    setIsStartButtonDisabled(true); // Disable the start button
+    setIsStartButtonDisabled(true);
   };
 
-  const handlePieceClick = (pieceIndex) => {
-    if (!isClickable) return;
+const handlePieceClick = async (pieceIndex) => {
+  if (!isClickable) return;
 
-    setIsClickable(false); // Disable further clicking
+  setIsClickable(false);
 
-    const endTime = Date.now();
-    const timeElapsed = endTime - startTime;
+  const endTime = Date.now();
+  const timeElapsed = endTime - startTime;
 
-    if (pieceIndex === selectedPiece) {
-      const secondsElapsed = Math.floor(timeElapsed / 1000);
-      const timePenalty = 0; // Additional penalty time for incorrect piece clicks
+  let newScore;
+  let newTotalTime;
 
-      const penalty = 0;
-      const newTotalTime = totalTime + timeElapsed;
-      const score = Math.max(0, 100000 - newTotalTime - penalty);
+  if (pieceIndex === selectedPiece) {
+    const secondsElapsed = Math.floor(timeElapsed / 1000);
+    const timePenalty = 0;
 
-      setTotalTime(newTotalTime);
-      setScore(score);
-      setIsCorrectPieceClicked(true);
-      setOpenModal(true);
-    } else {
-      const penalty = 5000; // Additional penalty time for incorrect piece clicks
+    const penalty = 0;
+    newTotalTime = totalTime + timeElapsed;
+    newScore = Math.max(0, 100000 - newTotalTime - penalty);
 
-      const newTotalTime = totalTime + timeElapsed;
-      const score = Math.max(0, 100000 - newTotalTime - penalty);
+    setTotalTime(newTotalTime);
+    setScore(newScore);
+    setIsCorrectPieceClicked(true);
+    setOpenModal(true);
+  } else {
+    const penalty = 5000;
 
-      setTotalTime(newTotalTime);
-      setScore(score);
-      setIsCorrectPieceClicked(false);
-      setOpenModal(true);
+    newTotalTime = totalTime + timeElapsed;
+    newScore = Math.max(0, 100000 - newTotalTime - penalty);
+
+    setTotalTime(newTotalTime);
+    setScore(newScore);
+    setIsCorrectPieceClicked(false);
+    setOpenModal(true);
+  }
+
+  setIsStartButtonDisabled(false);
+
+  if (clicksLeft === 0) {
+    setIsGoToLeaderboardDisabled(false);
+
+    var userId = "420";
+
+    const requestBody = {
+      "userId": userId,
+      "score": `${newScore}`,
+      "totalTime": `${newTotalTime}`
+    };
+    
+
+    try {
+      const response = await fetch('http://localhost:5291/UserScore', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody),
+      });
+
+      if (response.ok) {
+        console.log('Score and totalTime saved successfully!');
+        console.log(newScore);
+        console.log(newTotalTime);
+      } else {
+        console.error('Failed to save score and totalTime');
+      }
+    } catch (error) {
+      console.error('Error while saving score and totalTime:', error);
     }
+  }
+};
 
-    setIsStartButtonDisabled(false); // Enable the start button after a piece is selected
-  };
+
+  
 
   const closeModal = () => {
     setOpenModal(false);
     if (clicksLeft === 0) {
-      setClicksLeft(5);
+      setIsStartButtonDisabled(true);
+      setClicksLeft(0);
     }
   };
 
@@ -172,7 +242,10 @@ const Game1Skrik = () => {
               <div
                 key={index}
                 className={`grid-item ${selectedPiece === index ? 'selected' : ''}`}
-                onClick={() => handlePieceClick(index)}
+                onClick={() => {
+                  handlePieceClick(index);
+                  setGridClickCount((prevCount) => prevCount + 1);
+                }}
               >
                 <img src={piece} alt={`Piece ${index}`} />
               </div>
@@ -196,7 +269,7 @@ const Game1Skrik = () => {
         </div>
 
         <div className="button-container">
-          <div className="timer-container">
+          <div className="timer-container" style={{ paddingTop: '0px' }}>
             <div className="timer">Time:</div>
             <div className="time">{formatTime(currentTime)}</div>
           </div>
@@ -206,15 +279,22 @@ const Game1Skrik = () => {
               Start ({clicksLeft} clicks left)
             </button>
           ) : (
-            <Link to="/leaderboard" className="BUTTON_START">
+            <Link
+              to="/leaderboard"
+              className="BUTTON_START"
+              style={gridClickCount === 4 ? { pointerEvents: 'none', opacity: 0.6 } : {}}
+            >
               Go to Leaderboard
             </Link>
           )}
 
           <div className="score-container">
-            <div className="scoreHeader">Total time:</div>
-            <div className="score">{formatTime(totalTime)}</div>
+            <div className="score">{score}</div>
+            <div className="scoreHeader">Total score</div>
+            <br></br>
           </div>
+
+          <div className="score-container"></div>
         </div>
 
         {openModal && (

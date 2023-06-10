@@ -1,0 +1,55 @@
+body {
+    background-color: #000000;
+  }
+  
+  .container {
+    color: #fe390f;
+    text-align: center;
+    font-size: 5vw;
+    font-family: 'MunchFont', Arial, sans-serif;
+    margin: 0rem;
+  }
+  
+  .imageContainer {
+    background-color: #9b8250;
+    height: 88.3vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+
+
+
+  .image-container {
+  background-color: #9b8250;
+  height: 88.3vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+  
+  img {
+    width: 35vw;
+    height:25vh;
+    object-fit: cover;
+    border-radius: 11%;
+    box-shadow: 0 0 45px rgb(0, 0, 0) !important;
+  }
+
+  .chooseImage {
+    border-radius: 20px !important;
+  }
+  
+  @font-face {
+    font-family: 'MunchFont';
+    src: url('./GirottMunch-BoldBackslant.ttf') format('truetype');
+  }
+
+  h1{
+    font-size: 100px;
+    margin: 2rem;
+  }

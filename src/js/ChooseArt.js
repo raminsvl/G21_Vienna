@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../css/ChooseArt.css';
+import styles from '../css/ChooseArt.module.css';
 
 
 // Image imports:
@@ -15,39 +15,47 @@ const ChooseArt = () => {
 
 
 
-    const YouChoseSelvportrettRoute = '/you-chose-selvportrett';
+    const YouChoseSelvportrettRoute = 'you-chose-selvportrett';
     const youChoseSkrikRoute = '/you-chose-skrik';
     const YouChoseMadonnaRoute = '/you-chose-madonna';
+    const YouChoseAngstRoute = 'you-chose-angst';
     const YouChoseVampyrRoute = '/you-chose-vampyr';
 
+
   return (
-    <div className="header">
-      <p>Choose image</p>
-      <div className="image-container">
+    <div className={styles.container}>
+      <h1>Choose art</h1>
+      <div className={styles.imageContainer}>
 
      {/* SELVPORTRETT*/}
       <Link to={YouChoseSelvportrettRoute}>
-        <img src={SelvportrettImage} alt="Selvportrett" />
+        <img src={SelvportrettImage} alt="Selvportrett" className={styles.chooseImage}/>
       </Link>
 
-        <img src={AngstImage}/>
+
+     {/* ANGST*/}
+     <Link to={YouChoseAngstRoute}>
+        <img src={AngstImage} alt="Selvportrett" className={styles.chooseImage} />
+      </Link>
+
+     
 
 
        
 
         <Link to={youChoseSkrikRoute}>
-        <img src={SkrikImage} alt="Skrik" />
+        <img src={SkrikImage} alt="Skrik" className={styles.chooseImage}/>
          </Link>
 
 
         <Link to={YouChoseMadonnaRoute}>
-        <img src={MadonnaImage} alt="Madonna" />
+        <img src={MadonnaImage} alt="Madonna" className={styles.chooseImage}/>
          </Link>
 
-        <img src={PikenePaaBroenImage}/>
+        <img src={PikenePaaBroenImage} alt="PikenePaaBroen" className={styles.chooseImage}/>
 
 
-        <img src={VampyrImage}/>
+        <img src={VampyrImage} slt="Vampyr "className={styles.chooseImage}/>
 
 
       </div>

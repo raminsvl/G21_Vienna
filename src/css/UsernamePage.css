@@ -80,7 +80,7 @@
   width: 100%;
   max-width: 300px;
   display: block;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .leaderboard-button {

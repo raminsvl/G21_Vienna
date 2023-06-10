@@ -17,7 +17,7 @@ const SliceImage = () => {
 
   useEffect(() => {
     const image = new Image();
-    image.src = process.env.PUBLIC_URL + '../bilder/skrik.jpg';
+    image.src = process.env.PUBLIC_URL + '/skrik.jpg';
     image.onload = () => {
       setImageSize({ width: image.width, height: image.height });
       sliceImage(image);

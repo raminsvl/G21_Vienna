@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../css/Game1madonna.css';
+//import './Game1madonna.css';
 import placeholderImage2 from '../bilder/MunchLogoSquare.png';
 
 const Game1Vampyr = () => {
@@ -17,7 +17,7 @@ const Game1Vampyr = () => {
 
   useEffect(() => {
     const image = new Image();
-    image.src = process.env.PUBLIC_URL + '../bilder/vampyr.jpg';
+    image.src = process.env.PUBLIC_URL + '/vampyr.jpg';
     image.onload = () => {
       setImageSize({ width: image.width, height: image.height });
       sliceImage(image);

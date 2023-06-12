@@ -4,41 +4,40 @@ import invalidInputImage from '../bilder/invalid_input.gif';
 import '../css/UsernamePage.css';
 
 function UsernamePage() {
-  const [username, setUsername] = useState('');
+  const [name, setName] = useState('');
   const [showErrorAnimation, setShowErrorAnimation] = useState(false);
-  const [showGif, setShowGif] = useState(false);
-
   const navigate = useNavigate();
 
   const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
+    setName(event.target.value);
   };
 
   const handleContinueClick = async () => {
-    if (username.trim() === '') {
+    if (name.trim() === '') {
       setShowErrorAnimation(true);
-      setShowGif(true);
     } else {
-      setShowErrorAnimation(false);
-      setShowGif(false);
-  
-      const response = await fetch('http://localhost:5006/api/username', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          username: username,
-        }),
-      });
-  
-      if (response.ok) {
-        // Redirect to the Explanation page
-        navigate('/explanation');
+      try {
+        const response = await fetch('http://localhost:5006/Munch', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name }),
+        });
+
+        if (response.ok) {
+          console.log('Profile created successfully!');
+        } else {
+          console.log('Failed to create profile.');
+        }
+      } catch (error) {
+        console.log('Error:', error);
       }
+
+      setShowErrorAnimation(false);
+      navigate('/explanation');
     }
   };
-  
 
   return (
     <div className="container">
@@ -50,7 +49,7 @@ function UsernamePage() {
           type="text"
           className="username-input"
           placeholder="Enter username"
-          value={username}
+          value={name}
           onChange={handleUsernameChange}
         />
         <button className="continue-button" onClick={handleContinueClick}>

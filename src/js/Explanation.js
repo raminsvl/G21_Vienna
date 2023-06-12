@@ -5,7 +5,7 @@ const Explanation = () => {
   const navigate = useNavigate();
 
   const handleSkipButtonClick = () => {
-    navigate('/mode'); // Navigate to chooseMode page when skip button is clicked
+    navigate('/singleormultiplayer'); // Navigate to chooseMode page when skip button is clicked
   };
 
   const handleNextButtonClick = () => {

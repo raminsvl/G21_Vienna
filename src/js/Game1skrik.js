@@ -201,7 +201,7 @@ const handlePieceClick = async (pieceIndex) => {
     
 
     try {
-      const response = await fetch('http://localhost:5291/UserScore', {
+      const response = await fetch('http://localhost:5006/Munch', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

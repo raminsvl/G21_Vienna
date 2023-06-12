@@ -13,7 +13,7 @@
     font-size: 12vw;
     margin-top: 7vh;
     font-family: 'MunchFont';
-    text-shadow: 20px 20px 4px rgb(0, 0, 0);
+    text-shadow: none;
   }
   
   .easy-button {
@@ -54,7 +54,7 @@
   }
   
   .back-button {
-    background-color: #fe390f;
+    background-color: #194641;
     color: white;
     font-size: 5vw;
     height: 5.5vh;

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from '../css/SingleOrMultiPlayer.module.css';
 
 function SingleOrMultiPlayer() {
+  
   const navigate = useNavigate();
 
   const handleSingleButtonClick = () => {
@@ -15,9 +16,12 @@ function SingleOrMultiPlayer() {
 
   return (
     <div className={styles.backgroundImage}>
-      <button className={styles.button1} onClick={handleSingleButtonClick}>Singleplayer</button>
-      <button className={styles.button2} onClick={handleMultiPButtonClick}>Multiplayer</button>
+      <div className={styles.btnContainer}>
+        <button className={styles.button1} onClick={handleSingleButtonClick}>SINGLEPLAYER</button>
+        <button className={styles.button2} onClick={handleMultiPButtonClick}>MULTIPLAYER</button>
+      </div>
     </div>
   );
 }
+
 export default SingleOrMultiPlayer;

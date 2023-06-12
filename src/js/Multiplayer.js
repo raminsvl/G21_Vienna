@@ -15,8 +15,10 @@ function SingleOrMultiPlayer() {
 
   return (
     <div className={styles.backgroundImage}>
-      <button className={styles.button1} onClick={joingameButton}>Join group</button>
-      <button className={styles.button2} onClick={creategameButton}>Create group</button>
+      <div className={styles.btnContainer}>
+        <button className={styles.button1} onClick={joingameButton}>JOIN GROUP</button>
+        <button className={styles.button2} onClick={creategameButton}>CREATE GROUP</button>
+      </div>
     </div>
   );
 }

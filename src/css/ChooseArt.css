@@ -34,5 +34,6 @@ body {
 
   h1{
     font-size: 100px;
-    text-shadow: none;
+    text-shadow: none !important;
+    box-shadow: none !important;
   }

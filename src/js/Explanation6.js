@@ -24,13 +24,13 @@ const Explanation6 = () => {
     color: '#fff',
     fontSize: '30px',
     textShadow: 'none',
-    top: '25%',
+    top: '10%',
     fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
   };
 
   const explanationStyle = {
     position: 'absolute',
-    top: '45%',
+    top: '35%',
     color: '#fff',
     fontSize: '20px',
     marginTop: '5vh',
@@ -64,7 +64,7 @@ const Explanation6 = () => {
     position: 'Absolute',
     color: '#fff',
     fontSize: '15px',
-    bottom: '19%',
+    bottom: '25%',
   }
 
   const noteText = {

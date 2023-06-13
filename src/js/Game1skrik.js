@@ -224,8 +224,6 @@ const handlePieceClick = async (pieceIndex) => {
 };
 
 
-  
-
   const closeModal = () => {
     setOpenModal(false);
     if (clicksLeft === 0) {

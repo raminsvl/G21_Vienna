@@ -25,6 +25,7 @@ import Game1selvportrett from './js/Game1selvportrett';
 import ChooseArt from './js/ChooseArt';
 import YouChoseSelvportrett from './js/YouChoseSelvportrett';
 import Difficulty from './js/difficulty';
+import Leaderboard from './js/leaderboard';
 
 
 
@@ -58,6 +59,8 @@ function App() {
         <Route path="/you-chose-madonna/madonna" element={<Game1Madonna />} />
         <Route path="/you-chose-vampyr/vampyr" element={<Game1Vampyr />} />
         <Route path="/difficulty" element={<Difficulty />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
+
       </Routes>
     </Router>
   );

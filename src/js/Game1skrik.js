@@ -194,7 +194,7 @@ const handlePieceClick = async (pieceIndex) => {
 
   if (clicksLeft === 0) {
     setIsGoToLeaderboardDisabled(false);
-    const name = "Per";
+    const Username = getSavedName();
 
     try {
       const response = await fetch('http://localhost:5006/Munch', {
@@ -203,7 +203,7 @@ const handlePieceClick = async (pieceIndex) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name : name,
+          name : Username,
           score: newScore, // Update property name
           time: newTotalTime, // Update property name
         }),
@@ -211,7 +211,7 @@ const handlePieceClick = async (pieceIndex) => {
 
       if (response.ok) {
         console.log('Score and totalTime saved successfully!');
-        console.log(name);
+        console.log(Username);
         console.log(newScore);
         console.log(newTotalTime);
       } else {

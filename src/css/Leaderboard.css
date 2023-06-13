@@ -7,6 +7,46 @@
     background-color: #0f2335;
   }
   
+  .leaderboard-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .score-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  .your-score-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+    color: white;
+  }
+  
+  .your-score-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .your-score {
+    font-size: 24px; /* Update the font-size to your desired value */
+    font-weight: bold;
+  }
+  
+  
+  
   
   .leaderboard-box {
     background-color: white;
@@ -20,13 +60,13 @@
     font-weight: bold;
     margin-bottom: 20px;
   }
-
+  
   .friends-box {
     background-color: white;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; /* Add some space between the leaderboard and friends box */
+    margin-top: 20px;
   }
   
   .friends-header {
@@ -35,8 +75,8 @@
     margin-bottom: 20px;
   }
   
-  
-  .leaderboard-table {
+  .leaderboard-table,
+  .friends-table {
     width: 100%;
     border-collapse: collapse;
   }

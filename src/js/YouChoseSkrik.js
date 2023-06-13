@@ -7,7 +7,7 @@ import skrik from '../bilder/skrik.jpg'
 
 const YouChoseSkrik = () => {
   const skrikRoute = '/you-chose-skrik/skrik';
-  const customPageRoute = '/';
+  const chooseArtRoute = '/chooseart';
 
   return (
     <div>
@@ -18,7 +18,7 @@ const YouChoseSkrik = () => {
       <h3>Hint: 4th floor</h3>
       
       <div className={styles.buttonsContainer}>
-        <Link to={customPageRoute} className={styles.BUTTON_MUNCH}>Back</Link>
+        <Link to={chooseArtRoute} className={styles.BUTTON_MUNCH}>Back</Link>
         <Link to={skrikRoute}  className={styles.BUTTON_MUNCH}>Continue</Link>
       </div>
     </div>

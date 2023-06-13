@@ -9,7 +9,7 @@ import madonnaImage from '../bilder/munch4.jpg'
 
 const YouChoseMadonna = () => {
   const madonnaRoute = '/you-chose-madonna/madonna';
-  const customPageRoute = '/';
+  const chooseArtRoute = '/chooseart';
 
   return (
     <div>
@@ -20,7 +20,7 @@ const YouChoseMadonna = () => {
       <h3>Hint: 4th floor</h3>
       
       <div className={styles.buttonsContainer}>
-        <Link to={customPageRoute} className={styles.BUTTON_MUNCH}>Back</Link>
+        <Link to={chooseArtRoute} className={styles.BUTTON_MUNCH}>Back</Link>
         <Link to={madonnaRoute}  className={styles.BUTTON_MUNCH}>Continue</Link>
       </div>
     </div>

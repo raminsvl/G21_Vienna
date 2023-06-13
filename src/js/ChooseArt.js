@@ -24,7 +24,7 @@ const ChooseArt = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Choose art</h1>
+      <div className={styles.chooseArtHeader}>Choose art</div>
       <div className={styles.imageContainer}>
 
      {/* SELVPORTRETT*/}
@@ -64,4 +64,3 @@ const ChooseArt = () => {
 };
 
 export default ChooseArt;
-

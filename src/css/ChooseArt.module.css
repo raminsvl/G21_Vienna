@@ -1,12 +1,25 @@
+@font-face {
+  font-family: 'MunchFont';
+  src: url('./GirottMunch-BoldBackslant.ttf') format('truetype');
+}
+
+
 body {
     background-color: #000000;
   }
+
+.chooseArtHeader{
+  font-family: 'MunchFont';
+  font-size: 4rem;
+  margin: 2rem;
+  color: #fe390f;
+}
   
   .container {
     color: #fe390f;
     text-align: center;
     font-size: 5vw;
-    font-family: 'MunchFont', Arial, sans-serif;
+    font-family: 'MunchFont';
     margin: 0rem;
   }
   
@@ -44,10 +57,7 @@ body {
     border-radius: 20px !important;
   }
   
-  @font-face {
-    font-family: 'MunchFont';
-    src: url('./GirottMunch-BoldBackslant.ttf') format('truetype');
-  }
+ 
 
   h1{
     font-size: 100px;

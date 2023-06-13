@@ -4,6 +4,7 @@ import '../css/Leaderboard.css';
 const Leaderboard = () => {
   const [leaderboardData, setLeaderboardData] = useState([]);
   const [friendsData, setFriendsData] = useState([]);
+  const [yourScore, setYourScore] = useState(null); // State to store your score
 
   useEffect(() => {
     fetch('http://localhost:5006/Munch')
@@ -17,16 +18,13 @@ const Leaderboard = () => {
         }));
 
         setLeaderboardData(profiles);
-      })
-      .catch(error => {
-        console.error(error);
-      });
+        setFriendsData(profiles);
 
-    fetch('http://localhost:5006/Friends') // Example API endpoint for fetching friends data
-      .then(response => response.json())
-      .then(data => {
-        // Process the friends data as needed
-        setFriendsData(data);
+        // Assuming your name is "Your Name" and you want to display your score at the top
+        const yourProfile = profiles.find(profile => profile.name === "Your Name");
+        if (yourProfile) {
+          setYourScore(yourProfile.score);
+        }
       })
       .catch(error => {
         console.error(error);
@@ -35,8 +33,18 @@ const Leaderboard = () => {
 
   return (
     <div className="leaderboard-container">
+      <h1 className="leaderboard-title">Leaderboard</h1>
+      <div className="score-container">
+  <div className="your-score-header">Your Score</div>
+  <div className="your-score-box">
+    <div className="your-score">95000</div>
+  </div>
+</div>
+
+
+
       <div className="leaderboard-box">
-        <div className="leaderboard-header">All Time Leaderboard</div>
+        <div className="leaderboard-header">All Time</div>
         <table className="leaderboard-table">
           <thead>
             <tr>
@@ -65,15 +73,17 @@ const Leaderboard = () => {
             <tr>
               <th>Name</th>
               <th>Score</th>
-              <th>Status</th>
+              <th>Time</th>
+              <th>Shared Code</th>
             </tr>
           </thead>
           <tbody>
-            {friendsData.map((friend, index) => (
+            {friendsData.map((profile, index) => (
               <tr key={index}>
-                <td>{friend.name}</td>
-                <td>{friend.score}</td>
-                <td>{friend.status}</td>
+                <td>{profile.name}</td>
+                <td>{profile.score}</td>
+                <td>{profile.time}</td>
+                <td>{profile.sharedCode}</td>
               </tr>
             ))}
           </tbody>

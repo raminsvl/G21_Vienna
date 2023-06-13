@@ -214,6 +214,7 @@ const handlePieceClick = async (pieceIndex) => {
         console.log(Username);
         console.log(newScore);
         console.log(newTotalTime);
+        
       } else {
         console.error('Failed to save score and totalTime');
       }

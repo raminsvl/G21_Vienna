@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import invalidInputImage from '../bilder/invalid_input.gif';
 import '../css/UsernamePage.css';
+import { setSavedName } from './username';
+
 
 function UsernamePage() {
   const [name, setName] = useState('');
@@ -16,24 +18,7 @@ function UsernamePage() {
     if (name.trim() === '') {
       setShowErrorAnimation(true);
     } else {
-      try {
-        const response = await fetch('http://localhost:5006/Munch', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ name }),
-        });
-
-        if (response.ok) {
-          console.log('Profile created successfully!');
-        } else {
-          console.log('Failed to create profile.');
-        }
-      } catch (error) {
-        console.log('Error:', error);
-      }
-
+      setSavedName(name);
       setShowErrorAnimation(false);
       navigate('/explanation');
     }

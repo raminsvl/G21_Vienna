@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import '../css/Game1skrik.css';
 import placeholderImage2 from '../bilder/MunchLogoSquare.png';
 import { Link } from 'react-router-dom';
+import { getSavedName } from './username';
+
 
 const Game1Skrik = () => {
+  
   const [pieces, setPieces] = useState([]);
   const [randomPiece, setRandomPiece] = useState(null);
   const [showRandomPiece, setShowRandomPiece] = useState(false);
@@ -161,6 +164,7 @@ const handlePieceClick = async (pieceIndex) => {
 
   let newScore;
   let newTotalTime;
+  
 
   if (pieceIndex === selectedPiece) {
     const secondsElapsed = Math.floor(timeElapsed / 1000);
@@ -190,15 +194,7 @@ const handlePieceClick = async (pieceIndex) => {
 
   if (clicksLeft === 0) {
     setIsGoToLeaderboardDisabled(false);
-
-    var userId = "420";
-
-    const requestBody = {
-      "userId": userId,
-      "score": `${newScore}`,
-      "totalTime": `${newTotalTime}`
-    };
-    
+    const name = "Per";
 
     try {
       const response = await fetch('http://localhost:5006/Munch', {
@@ -206,11 +202,16 @@ const handlePieceClick = async (pieceIndex) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(requestBody),
+        body: JSON.stringify({
+          name : name,
+          score: newScore, // Update property name
+          time: newTotalTime, // Update property name
+        }),
       });
 
       if (response.ok) {
         console.log('Score and totalTime saved successfully!');
+        console.log(name);
         console.log(newScore);
         console.log(newTotalTime);
       } else {

@@ -7,3 +7,6 @@ export const setSavedName = (name) => {
 export const getSavedName = () => {
   return savedName;
 };
+
+
+

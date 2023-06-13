@@ -29,6 +29,8 @@ const Game1Skrik = () => {
   const [isGoToLeaderboardDisabled, setIsGoToLeaderboardDisabled] = useState(true);
 
   useEffect(() => {
+    const username = localStorage.getItem('username');
+    console.log(username);
     const image = new Image();
 
     /*
@@ -194,7 +196,7 @@ const handlePieceClick = async (pieceIndex) => {
 
   if (clicksLeft === 0) {
     setIsGoToLeaderboardDisabled(false);
-    const Username = getSavedName();
+    const Username = localStorage.getItem('username');
 
     try {
       const response = await fetch('http://localhost:5006/Munch', {
@@ -214,7 +216,6 @@ const handlePieceClick = async (pieceIndex) => {
         console.log(Username);
         console.log(newScore);
         console.log(newTotalTime);
-        
       } else {
         console.error('Failed to save score and totalTime');
       }

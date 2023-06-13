@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import invalidInputImage from '../bilder/invalid_input.gif';
 import '../css/UsernamePage.css';
-import { setSavedName } from './username';
-
 
 function UsernamePage() {
   const [name, setName] = useState('');
@@ -14,11 +12,11 @@ function UsernamePage() {
     setName(event.target.value);
   };
 
-  const handleContinueClick = async () => {
+  const handleContinueClick = () => {
     if (name.trim() === '') {
       setShowErrorAnimation(true);
     } else {
-      setSavedName(name);
+      localStorage.setItem('username', name);
       setShowErrorAnimation(false);
       navigate('/explanation');
     }

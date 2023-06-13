@@ -8,6 +8,27 @@ body {
     background-color: #000000;
   }
 
+  .imageText {
+    position: relative;
+    color: #9b8250;
+  }
+  
+  .overlayText {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  
+
+  
+
 .chooseArtHeader{
   font-family: 'MunchFont';
   font-size: 4rem;

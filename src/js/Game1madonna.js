@@ -201,7 +201,7 @@ const Game1Skrik = () => {
   return (
     <div>
       <div className="container">
-        <div className="grid" style={{ width: imageSize.width / 2.5 }}>
+        <div className="grid" style={{ width: imageSize.width / 2.5 / 3 }}>
           {pieces.map((piece, index) => {
             return (
               <div

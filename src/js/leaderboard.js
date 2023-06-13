@@ -1,62 +1,86 @@
-function Leaderboard(profiles) {
-    // Convert the profiles object to an array
-    const profilesArray = Object.values(profiles);
-  
-    // Sort the profiles by score in descending order
-    const sortedProfiles = profilesArray.sort((a, b) => b.score - a.score);
-  
-    // Create an HTML table element
-    const table = document.createElement('table');
-  
-    // Create the table header row
-    const headerRow = table.insertRow();
-    const headerNames = ['Name', 'Score', 'Time', 'Shared Code'];
-  
-    headerNames.forEach(headerName => {
-      const headerCell = document.createElement('th');
-      headerCell.textContent = headerName;
-      headerRow.appendChild(headerCell);
-    });
-  
-    // Create table rows for each profile
-    sortedProfiles.forEach(profile => {
-      const row = table.insertRow();
-      const { name, score, time, sharedCode } = profile;
-  
-      const nameCell = row.insertCell();
-      nameCell.textContent = name;
-  
-      const scoreCell = row.insertCell();
-      scoreCell.textContent = String(score);
-  
-      const timeCell = row.insertCell();
-      timeCell.textContent = String(time);
-  
-      const sharedCodeCell = row.insertCell();
-      sharedCodeCell.textContent = String(sharedCode);
-    });
-  
-    // Append the table to the document body
-    document.body.appendChild(table);
-  }
-  
-  // Make a fetch request to retrieve the response data
-  fetch('http://localhost:5006/Munch')
-    .then(response => response.json())
-    .then(data => {
-      // Convert the score, time, and sharedCode to numbers
-      const profiles = data.map(profile => ({
-        ...profile,
-        score: parseInt(profile.score),
-        time: parseInt(profile.time),
-        sharedCode: parseInt(profile.sharedCode)
-      }));
-  
-      Leaderboard(profiles); // Pass the response data to the Leaderboard function
-    })
-    .catch(error => {
-      console.error(error);
-    });
-  
-  export default Leaderboard;
-  
+import React, { useEffect, useState } from 'react';
+import '../css/Leaderboard.css';
+
+const Leaderboard = () => {
+  const [leaderboardData, setLeaderboardData] = useState([]);
+  const [friendsData, setFriendsData] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:5006/Munch')
+      .then(response => response.json())
+      .then(data => {
+        const profiles = data.map(profile => ({
+          ...profile,
+          score: parseInt(profile.score),
+          time: parseInt(profile.time),
+          sharedCode: parseInt(profile.sharedCode)
+        }));
+
+        setLeaderboardData(profiles);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+
+    fetch('http://localhost:5006/Friends') // Example API endpoint for fetching friends data
+      .then(response => response.json())
+      .then(data => {
+        // Process the friends data as needed
+        setFriendsData(data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
+
+  return (
+    <div className="leaderboard-container">
+      <div className="leaderboard-box">
+        <div className="leaderboard-header">All Time Leaderboard</div>
+        <table className="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Score</th>
+              <th>Time</th>
+              <th>Shared Code</th>
+            </tr>
+          </thead>
+          <tbody>
+            {leaderboardData.map((profile, index) => (
+              <tr key={index}>
+                <td>{profile.name}</td>
+                <td>{profile.score}</td>
+                <td>{profile.time}</td>
+                <td>{profile.sharedCode}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="friends-box">
+        <div className="friends-header">Friends</div>
+        <table className="friends-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Score</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {friendsData.map((friend, index) => (
+              <tr key={index}>
+                <td>{friend.name}</td>
+                <td>{friend.score}</td>
+                <td>{friend.status}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
+export default Leaderboard;

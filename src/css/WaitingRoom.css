@@ -1,15 +1,19 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./GirottMunch-BoldBackslant.ttf') format('truetype');
+}
+
 .container {
   background-color: #0f2335;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 100vh;
 }
 
 .title {
   color: #ffffff;
-  margin-top: 5%;
+  margin-top: 3%;
   text-shadow: none;
   font-family: sans-serif;
 }
@@ -23,33 +27,78 @@
   box-shadow: none !important;
 }
 
-.container li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
 
-.container li .status {
-  font-size: 14px;
-  margin-left: 10px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: #ffffff;
-}
-
-.container li .status.ready {
-  background-color: #fe390f;
-}
-
-.container li .status.waiting {
-  background-color: #194842;
+.user-Title {
+  position: relative;
+  bottom: 5vh; 
+  font-family: 'MyFont';
 }
 
 .readyButton {
-  font-size: 20px;
+  font-size: 5vw;
   position: absolute;
-  bottom: 30vh;
-  left: 30%;
+  bottom: 23vh;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  background-color: #fe390f;
+  color: #ffff;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.nextButtonStyle {
+  font-size: 5vw;
+  position: absolute;
+  bottom: 3vh; 
+  left: 80%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  background-color: #fe390f;
+  color: #ffff;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.container > .player {
+  position: relative;
+  bottom: 6vh;
+  color: white;
+  font-family: sans-serif;
+  margin-top: 1vh; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50vw;
+  
+} 
+
+.status {
+  padding: 1vh;
+  border-radius: 10px;
+  font-size: 2vw;
+  margin-left: 1vw;
+  width: 12vw;
+  text-align: center;
+}
+
+.status_ready {
+  background-color: #194641;
+  color: white;
+}
+
+.status_waiting {
+  background-color: white;
+  color: black;
+}
+
+.readyButtonClicked {
+  font-size: 5vw;
+  position: absolute;
+  bottom: 23vh;
+  left: 50%;
   transform: translateX(-50%);
   padding: 15px 30px;
   background-color: #194641;
@@ -59,16 +108,13 @@
   text-decoration: none;
 }
 
-.nextButtonStyle {
-  font-size: 20px;
+.warning {
+  color: red;
   position: absolute;
-  bottom: 5vh;
-  left: 80%;
+  bottom: 15vh; 
+  left: 50%;
   transform: translateX(-50%);
-  padding: 15px 30px;
-  background-color: #fe390f;
-  color: #ffff;
-  border: none;
-  border-radius: 10px;
-  text-decoration: none;
+  font-size: 3vw;
+  padding: 15px;
+  text-align: center;
 }

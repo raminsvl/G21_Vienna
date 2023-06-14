@@ -6,12 +6,12 @@ const Explanation5 = () => {
   const animationRef = useRef(null);
 
   const handleClickNext = () => {
-    window.location.href = '/Explanation6'; // Redirect to explanation6.html when the Next button is clicked
+    window.location.href = '/Explanation6'; 
   };
 
   const handleClickPlayAgain = () => {
     if (animationRef.current) {
-      animationRef.current.src = demo; // Reset the GIF source to replay it
+      animationRef.current.src = demo; 
     }
   };
 

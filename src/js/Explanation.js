@@ -5,11 +5,11 @@ const Explanation = () => {
   const navigate = useNavigate();
 
   const handleSkipButtonClick = () => {
-    navigate('/singleormultiplayer'); // Navigate to chooseMode page when skip button is clicked
+    navigate('/singleormultiplayer'); 
   };
 
   const handleNextButtonClick = () => {
-    navigate('/explanation2'); // Navigate to Explanation2 page when next button is clicked
+    navigate('/explanation2'); 
   };
 
   const containerStyle = {

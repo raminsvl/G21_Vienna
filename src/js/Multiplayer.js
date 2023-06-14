@@ -6,11 +6,11 @@ function SingleOrMultiPlayer() {
   const navigate = useNavigate();
 
   const joingameButton = () => {
-    navigate('/joingame'); // Navigate to chooseMode page when skip button is clicked
+    navigate('/joingame'); 
   };
 
   const creategameButton = () => {
-    navigate('/createagame'); // Navigate to Explanation2 page when next button is clicked
+    navigate('/createagame'); 
   };
 
   return (

@@ -7,11 +7,11 @@ function SingleOrMultiPlayer() {
   const navigate = useNavigate();
 
   const handleSingleButtonClick = () => {
-    navigate('/difficulty'); // Navigate to chooseMode page when skip button is clicked
+    navigate('/difficulty'); 
   };
 
   const handleMultiPButtonClick = () => {
-    navigate('/multiplayer'); // Navigate to Explanation2 page when next button is clicked
+    navigate('/multiplayer'); 
   };
 
   return (

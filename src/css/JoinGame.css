@@ -43,10 +43,10 @@
 
 .inputField {
   max-width: 70%;
-  width: 100%; /* Add this line to make the input field expand to the available width */
+  width: 100%; 
   height: 35px;
   margin-bottom: 20px;
-  border-radius: 10px; /* Add this line for round corners */
+  border-radius: 10px; 
 }
 
 

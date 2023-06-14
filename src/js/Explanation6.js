@@ -6,7 +6,7 @@ const Explanation6 = () => {
   const navigate = useNavigate();
 
   const handleNextButtonClick = () => {
-    navigate('/singleormultiplayer'); // Navigate to Explanation2 page when next button is clicked
+    navigate('/singleormultiplayer'); 
   };
 
   const containerStyle = {
@@ -16,7 +16,7 @@ const Explanation6 = () => {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#0f2335', // Add this line to set the background color
+    backgroundColor: '#0f2335', 
   };
 
   const titleStyle = {

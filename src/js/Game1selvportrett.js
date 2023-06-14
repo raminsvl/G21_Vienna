@@ -106,7 +106,7 @@ const Game1selvportrett = () => {
   const handlePieceClick = (pieceIndex) => {
     if (!isClickable) return;
 
-    setIsClickable(false); // Disable further clicking
+    setIsClickable(false); // Disables further clicking
     if (pieceIndex === selectedPiece) {
       const endTime = Date.now();
       const timeElapsed = endTime - startTime;

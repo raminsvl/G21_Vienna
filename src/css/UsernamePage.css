@@ -74,12 +74,13 @@
 
 .error-animation {
   position: absolute;
-  left: 44%;
-  transform: translateX(-50%);
-  top: 55%;
-  width: 100%;
-  max-width: 400px;
-  display: block;
+  margin-top: 1%;
+  width: 79%;
+  height: 60%;
+  top: 35vh;
+  left: 6vw;
+  object-fit: contain;
+    
   box-shadow: none !important;
 }
 

@@ -6,11 +6,11 @@ function Difficulty() {
     const navigate = useNavigate();
   
     const handleEasyButtonClick = () => {
-      navigate('/chooseart'); // Navigate to chooseMode page when skip button is clicked
+      navigate('/chooseart'); 
     };
   
     const handleBackButtonClick = () => {
-      navigate('/singleormultiplayer'); // Navigate to Explanation2 page when next button is clicked
+      navigate('/singleormultiplayer'); 
     };
     
     

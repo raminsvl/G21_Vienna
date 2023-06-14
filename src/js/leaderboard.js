@@ -7,7 +7,7 @@ const Leaderboard = () => {
   const [leaderboardData, setLeaderboardData] = useState([]);
   const [formattedLeaderboardData, setFormattedLeaderboardData] = useState([]);
   const [friendsData, setFriendsData] = useState([]);
-  const [yourScore, setYourScore] = useState(null); // State to store your score
+  const [yourScore, setYourScore] = useState(null); 
 
   useEffect(() => {
     fetch('http://localhost:5006/Munch')
@@ -23,7 +23,7 @@ const Leaderboard = () => {
         setLeaderboardData(profiles);
         const formattedData = formatTime(profiles).sort((a, b) => b.score - a.score).map((profile, index) => ({
           ...profile,
-          rank: index + 1, // Calculate the rank based on the sorted index
+          rank: index + 1, // Calculates the rank based on the sorted index
         }));
         setFormattedLeaderboardData(formattedData);
         setFriendsData(
@@ -31,11 +31,11 @@ const Leaderboard = () => {
             .sort((a, b) => b.score - a.score)
             .map((profile, index) => ({
               ...profile,
-              rank: index + 1, // Calculate the rank based on the sorted index
+              rank: index + 1, 
             }))
         );
 
-        // Assuming your name is "Your Name" and you want to display your score at the top
+        
         const yourProfile = profiles.find(profile => profile.name === "Your Name");
         if (yourProfile) {
           setYourScore(yourProfile.score);

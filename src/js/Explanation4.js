@@ -6,7 +6,7 @@ const Explanation4 = () => {
   const navigate = useNavigate();
 
   const handleNextButtonClick = () => {
-    navigate('/Explanation5'); // Navigate to Explanation2 page when next button is clicked
+    navigate('/Explanation5');
   };
 
   const containerStyle = {

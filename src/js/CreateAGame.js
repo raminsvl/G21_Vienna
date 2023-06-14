@@ -137,7 +137,7 @@ const CreateAGame = () => {
   const generatedCodeText = {
     color: '#fff',
     fontSize: '30px',
-    marginTop: '20vh', // Adjust the margin top here
+    marginTop: '20vh', 
   };
 
   const copyButtonStyle = {
@@ -147,7 +147,7 @@ const CreateAGame = () => {
     color: '#fff',
     border: 'none',
     borderRadius: '10px',
-    marginTop: '10px', // Adjust the margin top here
+    marginTop: '10px', 
     cursor: 'pointer',
   };
 

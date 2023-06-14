@@ -17,7 +17,7 @@ const WaitingRoom = () => {
   };
 
   const [users, setUsers] = useState([
-    { name: 'You', status: 'Waiting...' }, // Your user
+    { name: 'You', status: 'Waiting...' }, 
     { name: 'Håvard Johnsen', status: 'Ready' },
     { name: 'Khamzat Mikelsen', status: 'Ready' },
     { name: 'Umar Khattab', status: 'Waiting...' },

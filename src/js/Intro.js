@@ -15,16 +15,16 @@ function Intro() {
   ];
 
   const [currentColorIndex, setCurrentColorIndex] = useState(0);
-  const navigate = useNavigate(); // Declare useNavigate hook here
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentColorIndex((prevIndex) => {
         const nextIndex = prevIndex + 1;
         if (nextIndex === colors.length) {
-          clearInterval(interval); // Stop the color change
+          clearInterval(interval); // Stops the color change
           setTimeout(() => {
-            navigate('/usernamepage'); // Navigate to the next page after 5 seconds
+            navigate('/usernamepage'); // Navigates to the next page after 5 seconds
           }, 3900);
         }
         return nextIndex % colors.length;
@@ -34,7 +34,7 @@ function Intro() {
     return () => {
       clearInterval(interval);
     };
-  }, [colors.length, navigate]); // Add navigate as a dependency for useEffect
+  }, [colors.length, navigate]); // Adds navigate as a dependency for useEffect
 
   const currentColor = colors[currentColorIndex];
 

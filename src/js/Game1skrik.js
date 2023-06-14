@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../css/Game1skrik.css';
 import placeholderImage2 from '../bilder/MunchLogoSquare.png';
 import { Link } from 'react-router-dom';
-import { getSavedName } from './username';
+
 
 
 const Game1Skrik = () => {

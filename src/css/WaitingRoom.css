@@ -1,74 +1,74 @@
 .container {
-    background-color: #0f2335;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-  }
-  
-  .container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+  background-color: #0f2335;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+}
 
-  .title{
-    color: #ffffff;
-    margin-top: 5%;
-    text-Shadow: none;
-    font-Family: sans-serif;
-    
-  }
-  
-  .container li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .container li .status {
-    font-size: 14px;
-    margin-left: 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #ffffff;
-    
-  }
-  
-  .container li .status.ready {
-    background-color: #fe390f;
-  }
-  
-  .container li .status.waiting {
-    background-color: #194842;
-  }
-  
-  .readyButton {
-    font-size: 20px;
-    position: absolute;
-    bottom: 30vh;
-    left: 40%;
-    transform: translateX(-50%);
-    padding: 15px 30px;
-    background-color: #194641;
-    color: #ffff;
-    border: none;
-    border-radius: 10px;
-    text-decoration: none;
-  }
-  
-  .nextButtonStyle {
-    font-size: 20px;
-    position: absolute;
-    bottom: 5vh;
-    left: 80%;
-    transform: translateX(-50%);
-    padding: 15px 30px;
-    background-color: #fe390f;
-    color: #ffff;
-    border: none;
-    border-radius: 10px;
-    text-decoration: none;
-  }
-  
+.title {
+  color: #ffffff;
+  margin-top: 5%;
+  text-shadow: none;
+  font-family: sans-serif;
+}
+
+.centerImage {
+  max-width: 100%;
+  max-height: 50vh;
+  width: 100vw;
+  margin: 20px 0;
+  margin-bottom: 30%;
+  box-shadow: none !important;
+}
+
+.container li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.container li .status {
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.container li .status.ready {
+  background-color: #fe390f;
+}
+
+.container li .status.waiting {
+  background-color: #194842;
+}
+
+.readyButton {
+  font-size: 20px;
+  position: absolute;
+  bottom: 30vh;
+  left: 30%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  background-color: #194641;
+  color: #ffff;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.nextButtonStyle {
+  font-size: 20px;
+  position: absolute;
+  bottom: 5vh;
+  left: 80%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  background-color: #fe390f;
+  color: #ffff;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}

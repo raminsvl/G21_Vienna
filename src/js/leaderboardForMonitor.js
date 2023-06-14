@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import '../css/Leaderboard.css';
+import styles from '../css/LeaderboardForMonitor.module.css';
 
-const Leaderboard = () => {
+const LeaderboardForMonitor = () => {
   const [leaderboardData, setLeaderboardData] = useState([]);
   const [formattedLeaderboardData, setFormattedLeaderboardData] = useState([]);
   const [friendsData, setFriendsData] = useState([]);
@@ -65,18 +65,30 @@ const Leaderboard = () => {
   const customPageRoute = '/';
 
   return (
-    <div className="leaderboard-container">
-      <h1 className="leaderboard-title">Leaderboard</h1>
-      <div className="score-container">
-        <div className="your-score-header">Your Score</div>
-        <div className="your-score-box">
-          <div className="your-score">94 428</div>
+
+    
+    <div className={styles['leaderboard-container']}>
+            <p className={styles.title2}>
+        <span className={styles["custom-font"]}>Match</span>{" "}
+        <span className={styles["text-the"]}>THE</span>{" "}
+        <span className={styles["custom-font"]}>Munch</span>
+      </p>
+      <div className={styles['leaderboard-title']}>LEADERBOARD</div>
+      <div className={styles['your-score-header']}>June, 2023</div>
+      <div className={styles['score-container']}>
+        <div className={styles['your-score-header']}>June, 2023</div>
+        <div className={styles['your-score-box']}>
+          <div className={styles['your-score']}></div>
         </div>
       </div>
 
-      <div className="leaderboard-box">
-        <div className="leaderboard-header">All Time</div>
-        <table className="leaderboard-table">
+
+
+
+
+      <div className={styles['leaderboard-box']}>
+        <div className={styles['leaderboard-header']}>June, 2023</div>
+        <table className={styles['leaderboard-table']}>
           <thead>
             <tr>
               <th>Rank</th>
@@ -97,38 +109,10 @@ const Leaderboard = () => {
           </tbody>
         </table>
       </div>
-      <div className="friends-box">
-        <div className="friends-header">Friends</div>
-        <div className='shared-code-header'>&#91; <b>Code: </b>XT8Z  &#93;  </div>
-        <table className="friends-table">
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Name</th>
-              <th>Score</th>
-              <th>Time</th>
 
-            </tr>
-          </thead>
-          <tbody>
-            {friendsData.map((profile, index) => (
-              <tr key={index}>
-                <td>{profile.rank}</td>
-                <td>{profile.name}</td>
-                <td>{formatScore(profile.score)}</td>
-                <td>{profile.formattedTime}</td>
 
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <div className='buttonsContainer'>
-      {/*   <Link to={customPageRoute} className='BUTTON_MUNCH'>Back</Link>*/}
-        <Link to={chooseArtRoute}  className='BUTTON_MUNCH'>Play Again</Link>
-      </div>
     </div>
   );
 };
 
-export default Leaderboard;
+export default LeaderboardForMonitor;

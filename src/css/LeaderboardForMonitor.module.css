@@ -1,0 +1,170 @@
+.title2 {
+    text-align: center;
+
+    color: #fe390f;
+    font-size: 165px;
+    margin: 0;
+    white-space: nowrap;
+    text-shadow: none;
+  }
+  
+  .custom-font {
+    font-family: 'MunchFont';
+    color: #fe390f;
+  }
+  
+  .text-the {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+  }
+  
+
+
+.leaderboard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f2335;
+  width: 100vw;
+  /*height: 100vh;*/
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.leaderboard-title {
+    font-family: 'MunchFont';
+  font-size: 7vh;
+  font-weight: bold;
+  margin-top: 0px;
+  text-align: center;
+  color: white;
+  color: #9b8250;
+  color: #eba398;
+  color:red;
+  color: #fe390f;
+  background-color: #194641;
+  background-color: white;
+  width: 90%;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.your-score-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+  color: white;
+}
+
+.your-score-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.your-score {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.leaderboard-box {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  overflow-x: scroll;
+}
+
+.leaderboard-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.friends-box {
+  background-color: white;
+  margin: 2rem;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.friends-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.leaderboard-table,
+.friends-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: 10vw;
+  font-size: 4vh;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #dadada;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.BUTTON_MUNCH {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #00bcd4;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.BUTTON_MUNCH:hover {
+  background-color: #0097a7;
+}
+
+@font-face {
+    font-family: 'MunchFont';
+    src: url('./GirottMunch-BoldBackslant.ttf') format('truetype');
+  }

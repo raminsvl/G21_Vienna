@@ -1,97 +1,125 @@
+.shared-code-header{
+  margin-bottom: 20px;
+}
+
 .leaderboard-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #0f2335;
-  }
-  
-  .leaderboard-title {
-    font-size: 36px;
-    font-weight: bold;
-    margin-top: 20px;
-    text-align: center;
-    color: white;
-  }
-  
-  .score-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  
-  .your-score-header {
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: 20px;
-    color: white;
-  }
-  
-  .your-score-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    padding: 5px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .your-score {
-    font-size: 24px; /* Update the font-size to your desired value */
-    font-weight: bold;
-  }
-  
-  
-  
-  
-  .leaderboard-box {
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .leaderboard-header {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .friends-box {
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-  }
-  
-  .friends-header {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .leaderboard-table,
-  .friends-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th,
-  td {
-    padding: 8px;
-    text-align: left;
-  }
-  
-  th {
-    font-weight: bold;
-  }
-  
-  tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f2335;
+  overflow-x: scroll;
+  width: 414px;
+  height: 896px;
+}
+
+.leaderboard-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.your-score-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+  color: white;
+}
+
+.your-score-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  /*padding: 5px;*/
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.your-score {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+  background-color: #9b8250;
+  border-radius: 10px;
+}
+
+.leaderboard-box,
+.friends-box {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow-x: scroll;
+}
+
+.leaderboard-header,
+.friends-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.friends-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.leaderboard-table,
+.friends-table {
+  width: max-content;
+  border-collapse: collapse;
+  margin: 0px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.BUTTON_MUNCH {
+  display: block;
+  width: 35vw;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #FF3A10;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 0.1rem;
+  font-family: Arial, sans-serif;
+}

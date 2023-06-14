@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import invalidInputImage from '../bilder/invalid_input.gif';
 import '../css/UsernamePage.css';
@@ -7,6 +7,18 @@ function UsernamePage() {
   const [name, setName] = useState('');
   const [showErrorAnimation, setShowErrorAnimation] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    let timeoutId;
+    if (showErrorAnimation) {
+      timeoutId = setTimeout(() => {
+        setShowErrorAnimation(false);
+      }, 4000);
+    }
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [showErrorAnimation]);
 
   const handleUsernameChange = (event) => {
     setName(event.target.value);

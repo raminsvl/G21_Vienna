@@ -75,12 +75,11 @@
 .error-animation {
   position: absolute;
   margin-top: 1%;
-  width: 79%;
+  width: 70%;
   height: 60%;
   top: 35vh;
-  left: 15vw;
+  left: 20vw;
   object-fit: contain;
-    
   box-shadow: none !important;
 }
 

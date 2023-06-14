@@ -60,7 +60,7 @@
 
 .continue-button {
   position: absolute;
-  margin-top: 10vh; /* Adjust the value to move the button lower */
+  margin-top: 10vh; 
   left: 50%;
   transform: translateX(-50%);
   padding: 15px 30px;
@@ -78,7 +78,7 @@
   width: 79%;
   height: 60%;
   top: 35vh;
-  left: 6vw;
+  left: 15vw;
   object-fit: contain;
     
   box-shadow: none !important;

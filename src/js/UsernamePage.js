@@ -13,7 +13,7 @@ function UsernamePage() {
     if (showErrorAnimation) {
       timeoutId = setTimeout(() => {
         setShowErrorAnimation(false);
-      }, 4000);
+      }, 994000);
     }
     return () => {
       clearTimeout(timeoutId);
